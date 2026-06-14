@@ -1,0 +1,47 @@
+Business - Small grocery, clothes, bakery shop.
+
+Domains - Customer, supplier, product, sale, purchase, payment, expense.
+
+Workflows -
+    1. Sale Workflow -
+        customer give product list -->
+        owner give goods -->
+        customer give payment -->
+        sales recorded and stock decrease
+
+    2. Purchase Workflow -
+        owner order goods to suppliers -->
+        suppliers send good through transportation -->
+        owner recieve good -->
+        owner give payment to transporter -->
+        expense recorded -->
+        owner give payment to supplier -->
+        purchase recorded and stock increase
+
+Requirement - 
+    1. track payment record
+    2. track sales
+    3. handle inventory
+    4. track purchase
+    5. have customer and suppliers details
+    6. show summary of data
+    7. track expenses
+
+Data Model -
+    1. customer -- id, name, recipt type, payment(online/cash)
+    2. supplier -- id, name, contact number, payment(online/cash)
+    3. inventory --id, product name, quantity, price, category
+    4. expense -- id place, money 
+    6. sale -- id, product, quantity, price
+    7. purchase -- id, product, quantity, price
+    7. payment -- id, product, quantity, price
+
+System Design -
+    1. dashboard module-- total stock, stock quantity, today sale, today purchase, low stock, out of stock
+    2. inventory module-- product name, quantity, price, category, indicator(in stock/low stock/stock out), CRUD
+    3. customer module-- name, payment type, recipt type, CRUD
+    4. supplier module-- name, contact number, payment type, CRUD
+    5. sale module-- invoice, payment in, CRUD
+    6. purchase module-- bill, payment out, CRUD
+    7. expense module-- place, money, name, CRUD
+
