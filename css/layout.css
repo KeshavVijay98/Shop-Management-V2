@@ -91,12 +91,14 @@ body {
 
 .header-actions button:hover {
     color: darkblue;
-    text-shadow: 4px 4px 8px darkblue;
+    background-color: lightsalmon;
+    border-radius: 100%;
 }
 
 .header-actions button:active {
     color: darkred;
-    text-shadow: 4px 4px 8px darkred;
+    background-color: lightblue;
+    border-radius: 100%;
 }
 
 .app-layout {

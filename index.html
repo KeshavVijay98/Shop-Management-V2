@@ -9,12 +9,13 @@
     <title>Retail Management System</title>
 </head>
 <body>
+    <!-- app layout -->
     <header class="header">
         <div class="header-logo">
             <h1>Retail Store</h1>
         </div>
 
-        <form class="header-search">
+        <form class="header-search" id="header-search">
             <label for="search">
                 <span><i class="fa-solid fa-magnifying-glass"></i></span>
             </label>
@@ -29,9 +30,10 @@
     </header>
 
     <main>
+        <!-- app layout -->
         <div class="app-layout">
             <aside class="sidebar">
-                <nav class="navlinks">
+                <nav class="navlinks" id="navlinks">
                     <a href="index.html"><i class="fa-solid fa-square-poll-vertical"></i>Dashboard</a>
                     <a href="inventory.html"><i class="fa-solid fa-boxes-stacked"></i>Inventory</a>
                     <a href="customer.html"><i class="fa-solid fa-users"></i>Customer</a>
@@ -43,9 +45,120 @@
             </aside>
 
             <section class="page-section">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h2>Business Overview</h2>
+                        <p>Real time operational summary</p>
+                    </div>
+
+                    <div class="dashboard-action" id="dashboard-action">
+                        <button class="dashboard-button"><i class="fa-solid fa-download"></i>Export Report</button>
+                    </div>
+                </div>
+                
+                <div class="dashboard-cards" id="dashboard-cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-box"></i> <h3>Total Products</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-number" id="total-products">0</p>
+                            <p class="card-comparison">+0 vs yesterday</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-boxes-stacked"></i> <h3>Stock Quantity</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-number" id="stock-quantity">0</p>
+                            <p class="card-comparison">+0 vs yesterday</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-box-open"></i> <h3>Low Stock</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-number" id="low-stock">0</p>
+                            <p class="card-comparison">+0 vs yesterday</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-ban"></i> <h3>Out of Stock</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-number" id="stock-out">0</p>
+                            <p class="card-comparison">+0 vs yesterday</p>
+                        </div>
+                    </div>
+
+                        <!-- business cards -->
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-money-bills"></i> <h3>Today's Sales</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-number" id="today-sales">₹0</p>
+                            <p class="card-comparison">₹0 vs yesterday</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-cart-shopping"></i> <h3>Today's Purchases</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-number" id="today-purchases">₹0</p>
+                            <p class="card-comparison">₹0 vs yesterday</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-receipt"></i> <h3>Today's Expenses</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-number" id="today-expenses">₹0</p>
+                            <p class="card-comparison">₹0 vs yesterday</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-wallet"></i> <h3>Today's Profit</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-number" id="today-profit">₹0</p>
+                            <p class="card-comparison">₹0 vs yesterday</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-chart">
+                    <div class="chart-header">
+                        <select name="business-trend" id="business-trend">
+                            <option value="sales" selected>Sales</option>
+                            <option value="purchase">Purchases</option>
+                            <option value="expense">Expenses</option>
+                            <option value="profit">Profit</option>
+                        </select>
+                        <select name="business-period" id="business-period">
+                            <option value="7">Last 7 days</option>
+                            <option value="14">Last 14 days</option>
+                            <option value="30">Last 30 days</option>
+                        </select>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="business-chart"></canvas>
+                    </div>
+                </div>
             </section>
         </div>
-
     </main>
     <script src="./JS/app.js"></script>
     <script src="./JS/dashboard.js"></script>
