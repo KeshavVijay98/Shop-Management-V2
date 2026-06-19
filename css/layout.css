@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -23,8 +23,10 @@ body {
 
     padding: 20px;
 
-    background-color: lightgrey;
+    background-color: #f1f5f9;
     color: black;
+
+    border-bottom: 1px solid #475569;
 }
 
 .header-logo {
@@ -42,7 +44,7 @@ body {
     padding: 0 16px;
 
     background-color: #f1f5f9;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #475569;
     border-radius: 8px;
 }
 
@@ -77,7 +79,7 @@ body {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
 }
 
 .header-actions button {
@@ -86,19 +88,12 @@ body {
     border: none;
     font-size: 28px;
     transition: 0.4s;
-    cursor: pointer;
-}
-
-.header-actions button:hover {
-    color: darkblue;
-    background-color: lightsalmon;
-    border-radius: 100%;
+    color: darkred;
 }
 
 .header-actions button:active {
-    color: darkred;
-    background-color: lightblue;
-    border-radius: 100%;
+    color: darkblue;
+    cursor: pointer;
 }
 
 .app-layout {
@@ -120,13 +115,15 @@ body {
     left: 0;
 
     background-color: #f5f5f5;
-    border: 2px solid #ddd;
+    border-right: 1px solid #ddd;
 }
 
 .page-section {
     flex: 1;
     padding: 20px;
     margin-left: 240px;
+    background-color: #f1f5f9;
+    height: calc(200vh - 100px);
 }
 
 .navlinks {

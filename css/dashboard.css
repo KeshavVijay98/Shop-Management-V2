@@ -1,0 +1,63 @@
+.dashboard-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.dashboard-action button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 12px;
+    transition: 0.4s;
+    box-shadow: inset 0px 4px 4px darkred;
+}
+
+.dashboard-action button:active {
+    background-color: darkred;
+    color: white;
+    box-shadow: inset 0px -4px 4px white;
+    cursor: pointer;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    padding: 16px;
+    min-height: 180px;
+    border: 1px solid #475569;
+    border-radius: 16px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.card-number {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.card-comparison {
+    font-size: 20px;
+    color: gray;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
