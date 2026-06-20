@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/inventory.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <title>Retail Management System</title>
+</head>
+<body>
+    <!-- app layout -->
+    <header class="header">
+        <div class="header-logo">
+            <h1>Retail Store</h1>
+        </div>
+
+        <form class="header-search" id="header-search">
+            <label for="search">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            </label>
+            <input id="search" name="search" placeholder="Search......" type="search">
+        </form>
+
+        <div class="header-actions">
+            <button><i class="fa-solid fa-bell"></i></button>
+            <button><i class="fa-solid fa-gear"></i></button>
+            <button><i class="fa-solid fa-user"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- app layout -->
+        <div class="app-layout">
+            <aside class="sidebar">
+                <nav class="navlinks" id="navlinks">
+                    <a href="index.html"><i class="fa-solid fa-square-poll-vertical"></i>Dashboard</a>
+                    <a href="inventory.html" class="active"><i class="fa-solid fa-boxes-stacked"></i>Inventory</a>
+                    <a href="customer.html"><i class="fa-solid fa-users"></i>Customer</a>
+                    <a href="sales.html"><i class="fa-solid fa-money-bills"></i>Sales</a>
+                    <a href="supplier.html"><i class="fa-solid fa-user-group"></i>Supplier</a>
+                    <a href="purchase.html"><i class="fa-solid fa-cart-shopping"></i>Purchases</a>
+                    <a href="expense.html"><i class="fa-solid fa-receipt"></i>Expenses</a>
+                </nav>
+            </aside>
+
+            <section class="page-section">
+
+            </section>
+        </div>
+    </main>
+    <script src="./JS/app.js"></script>
+    <script src="./JS/dashboard.js"></script>
+</body>
+</html>
