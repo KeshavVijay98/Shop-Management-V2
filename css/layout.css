@@ -5,7 +5,6 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    height: 100vh;
 }
 
 .header {
@@ -99,7 +98,6 @@ body {
 .app-layout {
     display: flex;
     margin-top: 100px;
-    height: calc(100vh - 100px);
 }
 
 .sidebar {
@@ -123,7 +121,6 @@ body {
     padding: 20px;
     margin-left: 240px;
     background-color: #f1f5f9;
-    height: calc(200vh - 100px);
 }
 
 .navlinks {
