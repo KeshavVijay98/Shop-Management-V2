@@ -48,7 +48,7 @@
                 <div class="inventory-header">
                     <div class="inventory-title">
                         <h2>Inventory Management</h2>
-                        <p>Manage your prodcuts, stocks, track and see them</p>
+                        <p>Manage your products, stocks, track and see them</p>
                     </div>
                 </div>
 
@@ -96,17 +96,17 @@
 
                 <div class="inventory-content">
                     <div class="inventory-toolbar">
-                        <button class="add-product" id="add-product"><i class="fa-solid fa-plus"></i><span>Add Product</span></button>
+                        <button class="add-product" id="add-product" type="button"><i class="fa-solid fa-plus"></i><span>Add Product</span></button>
 
                         <form class="inventory-search">
                             <label for="inventory-search">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </label>
-                            <input id="inventory-search" name="inventory-search" placeholder="Search prodcuts..." type="search">
+                            <input id="inventory-search" name="inventory-search" placeholder="Search products..." type="search">
                         </form>
 
-                        <button class="filter" id="filter"><i class="fa-solid fa-filter"></i><span>Filter</span></button>
-                        <button class="sort" id="sort"><i class="fa-solid fa-sort"></i><span>Sort</span></button>
+                        <button class="filter" id="filter" type="button"><i class="fa-solid fa-filter"></i><span>Filter</span></button>
+                        <button class="sort" id="sort" type="button"><i class="fa-solid fa-sort"></i><span>Sort</span></button>
                     </div>
 
                     <div class="inventory-table">
@@ -120,13 +120,51 @@
                                     <th>Sell Price</th>
                                     <th>Quantity</th>
                                     <th>Status</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
                         </table>
                     </div>
 
+                    <div class="inventory-pagination">
+                        <div class="pagination-info">
+                            <p>Showing 1-20 of 480 products</p>
+                        </div>
+                        <div class="pagination-controls">
+                            <button type="button" class="previous-page-button"><i class="fa-solid fa-chevron-left"></i><span>Previous</span></button>
+                            <button type="button" class="page-number active"><span>1</span></button>
+                            <button type="button" class="page-number"><span>2</span></button>
+                            <button type="button" class="page-number"><span>3</span></button>
+                            <span class="page-dots">.....</span>
+                            <button type="button" class="page-number"><span>24</span></button>
+                            <button type="button" class="next-page-button"><span>Next</span><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="inventory-stock-movement">
+                    <div class="movement-header">
+                        <h3 class="movement-title">Recent Stock Movement</h3>
+                        <button type="button" class="movement-button">View all history</button>
+                    </div>
+                    <div class="movement-body">
+                        <table class="movement-table">
+                            <thead>
+                                <tr>
+                                    <th>Date & Time</th>
+                                    <th>Product</th>
+                                    <th>Movement type</th>
+                                    <th>Quantity change</th>
+                                    <th>Reason</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
     <script src="./JS/app.js"></script>
