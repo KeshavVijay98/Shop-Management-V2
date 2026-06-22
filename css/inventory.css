@@ -3,8 +3,8 @@
     flex-direction: column;
     border: 1px solid black;
     border-radius: 12px;;
-    margin-top: 56px;
-    padding: 4px 0px 12px 0px;
+    margin-top: 100px;
+    padding: 4px 0px 0px 0px;
     box-shadow: 0 8px 12px rgba(0,0,0,0.08);
 }
 
@@ -51,8 +51,8 @@
 }
 
 .inventory-search:hover {
-    color: darkred;
-    box-shadow: 4px 4px 8px darkred;
+    color: black;
+    box-shadow: 4px 4px 8px black;
 }
 
 .inventory-search:focus-within {
@@ -68,9 +68,10 @@
     padding: 12px;
     font-size: 16px;
     background-color: white;
+    color: black;
     border-radius: 12px;
     transition: 0.4s;
-    box-shadow: inset 0px 4px 4px darkred;
+    box-shadow: inset 0px 4px 4px black;
     cursor: pointer;
 }
 
@@ -79,14 +80,15 @@
     padding: 12px;
     font-size: 16px;
     background-color: white;
+    color: black;
     border-radius: 12px;
     transition: 0.4s;
-    box-shadow: inset 0px 4px 4px darkred;
+    box-shadow: inset 0px 4px 4px black;
     cursor: pointer;
 }
 
 .add-product:active, .filter:active, .sort:active {
-    background-color: darkred;
+    background-color: black;
     color: white;
     box-shadow: inset 0px -4px 4px white;
     cursor: pointer;
@@ -117,4 +119,113 @@
     text-align: center;
     background-color: white;
     border-right: 1px solid #475569;
+}
+
+.inventory-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px 0 12px;
+}
+
+.pagination-info {
+    font-size: 16px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.previous-page-button, .next-page-button {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background-color: white;
+    color: black;
+    border: 1px solid #475569;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.4s;
+    box-shadow: inset 0px 1px 4px black;
+}
+
+.page-number {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background-color: white;
+    color: black;
+    border: 1px solid #475569;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.4s;
+    box-shadow: inset 0px 1px 4px black;
+}
+
+.previous-page-button:active, .next-page-button:active, .page-number:active:not(.active) {
+    background-color: black;
+    color: white;
+    box-shadow: inset 0px -1px 4px white;
+    cursor: pointer;
+}
+
+.inventory-stock-movement {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0px 0px 0px;
+    border: 1px solid #475569;
+    border-radius:4px;
+    margin: 100px 0px 0px 0px;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.08);
+}
+
+.movement-header {
+    padding: 12px 40px 12px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #475569;
+    height: 48px;
+}
+
+.movement-title {
+    font-size: 24px;
+}
+
+.movement-button {
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.movement-button:active {
+    color: red;
+}
+
+.movement-table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.movement-table th {
+    font-size: 24px;
+    background-color: lightblue;
+    text-align: center;
+    padding: 12px;
+    border-right: 1px solid #475569;
+}
+
+.movement-table td {
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    border-right: 1px solid #475569;
+    border-radius: 4px;
 }

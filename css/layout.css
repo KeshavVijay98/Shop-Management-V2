@@ -68,7 +68,7 @@ body {
 
 .header-search:hover {
     color: darkred;
-    box-shadow: 4px 4px 8px darkred;
+    box-shadow: 4px 4px 8px black;
 }
 
 .header-search:focus-within {
@@ -87,11 +87,11 @@ body {
     border: none;
     font-size: 28px;
     transition: 0.4s;
-    color: darkred;
+    color: black;
 }
 
 .header-actions button:active {
-    color: darkblue;
+    color: red;
     cursor: pointer;
 }
 
