@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./css/inventory.css">
     <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
     <title>Retail Management System</title>
 </head>
 <body>
@@ -44,15 +45,15 @@
                 </nav>
             </aside>
 
-            <section class="page-section">
-                <div class="inventory-header">
-                    <div class="inventory-title">
+            <section class="page-section inventory-page">
+                <div class="page-header">
+                    <div class="page-title">
                         <h2>Inventory Management</h2>
                         <p>Manage your products, stocks, track and see them</p>
                     </div>
                 </div>
 
-                <div class="inventory-cards">
+                <div class="cards-grid">
                     <div class="card">
                         <div class="card-header">
                             <i class="fa-solid fa-box"></i> <h3>Total Products</h3>
@@ -105,8 +106,10 @@
                             <input id="inventory-search" name="inventory-search" placeholder="Search products..." type="search">
                         </form>
 
-                        <button class="filter" id="filter" type="button"><i class="fa-solid fa-filter"></i><span>Filter</span></button>
-                        <button class="sort" id="sort" type="button"><i class="fa-solid fa-sort"></i><span>Sort</span></button>
+                        <div class="inventory-action">
+                            <button class="filter" id="filter" type="button"><i class="fa-solid fa-filter"></i><span>Filter</span></button>
+                            <button class="sort" id="sort" type="button"><i class="fa-solid fa-sort"></i><span>Sort</span></button>
+                        </div>
                     </div>
 
                     <div class="inventory-table">
@@ -124,7 +127,30 @@
                                     <th>Delete</th>
                                 </tr>
                             </thead>
-                            <tbody></tbody>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
 
@@ -160,7 +186,15 @@
                                     <th>Reason</th>
                                 </tr>
                             </thead>
-                            <tbody></tbody>
+                            <tbody>
+                                <tr>
+                                    <td>fhh</td>
+                                    <td>r</td>
+                                    <td>57</td>
+                                    <td>6577</td>
+                                    <td>575757</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

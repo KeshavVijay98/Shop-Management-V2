@@ -1,0 +1,120 @@
+.inventory-content {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 12px;;
+    margin-top: 56px;
+    padding: 4px 0px 12px 0px;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.08);
+}
+
+.inventory-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    font-size: 20px;
+    border-bottom: 1px solid #475569;
+}
+
+.inventory-search {
+    width: 480px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+
+    background-color: white;
+    border: 1px solid #475569;
+    border-radius: 8px;
+}
+
+.inventory-search i {
+    font-size: 16px;
+    color: #475569;
+}
+
+.inventory-search input{
+    flex: 1;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px;
+    color: #0f172a;
+}
+
+.inventory-search input::placeholder {
+    color: #475569;
+}
+
+.inventory-search:hover {
+    color: darkred;
+    box-shadow: 4px 4px 8px darkred;
+}
+
+.inventory-search:focus-within {
+    box-shadow: 4px 4px 8px darkblue;
+}
+
+.inventory-action {
+    display: flex;
+    gap: 24px;
+}
+
+.add-product {
+    padding: 12px;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 12px;
+    transition: 0.4s;
+    box-shadow: inset 0px 4px 4px darkred;
+    cursor: pointer;
+}
+
+.filter, .sort {
+    width: 80px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 12px;
+    transition: 0.4s;
+    box-shadow: inset 0px 4px 4px darkred;
+    cursor: pointer;
+}
+
+.add-product:active, .filter:active, .sort:active {
+    background-color: darkred;
+    color: white;
+    box-shadow: inset 0px -4px 4px white;
+    cursor: pointer;
+}
+
+.inventory-table {
+    border-bottom: 2px solid #475569;
+}
+
+.product-table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.product-table th {
+    font-size: 20px;
+    background-color: lightblue;
+    text-align: center;
+    padding: 12px;
+    border-right: 1px solid #475569;
+}
+
+.product-table td {
+    font-size: 18px;
+    text-align: center;
+    background-color: white;
+    border-right: 1px solid #475569;
+}
