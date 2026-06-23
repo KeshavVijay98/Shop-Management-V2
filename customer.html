@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/customer.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <title>Retail Management System</title>
+</head>
+<body>
+    <!-- app layout header-->
+    <header class="header">
+        <div class="header-logo">
+            <h1>Retail Store</h1>
+        </div>
+
+        <form class="header-search">
+            <label for="header-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+            <input id="header-search" name="header-search" placeholder="Search products, sales, customers,...." type="search">
+        </form>
+
+        <div class="header-actions">
+            <button><i class="fa-solid fa-bell"></i></button>
+            <button><i class="fa-solid fa-gear"></i></button>
+            <button><i class="fa-solid fa-user"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- app layout -->
+        <div class="app-layout">
+            <aside class="sidebar">
+                <nav class="navlinks" id="navlinks">
+                    <a href="index.html"><i class="fa-solid fa-square-poll-vertical"></i>Dashboard</a>
+                    <a href="inventory.html"><i class="fa-solid fa-boxes-stacked"></i>Inventory</a>
+                    <a href="customer.html" class="active"><i class="fa-solid fa-users"></i>Customer</a>
+                    <a href="sales.html"><i class="fa-solid fa-money-bills"></i>Sales</a>
+                    <a href="supplier.html"><i class="fa-solid fa-user-group"></i>Supplier</a>
+                    <a href="purchase.html"><i class="fa-solid fa-cart-shopping"></i>Purchases</a>
+                    <a href="expense.html"><i class="fa-solid fa-receipt"></i>Expenses</a>
+                </nav>
+            </aside>
+
+            <section class="page-section customer-page">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h2>Customer</h2>
+                        <p>Manage customer records and transactions</p>
+                    </div>
+                </div>
+
+                <div class="customer-content">
+                    <div class="customer-list">
+                        <div class="page-toolbar">
+                            <button class="add-customer" id="add-customer" type="button"><i class="fa-solid fa-plus"></i><span>Add customer</span></button>
+                            <form class="page-search">
+                                <label for="customer-search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </label>
+                                <input id="customer-search" name="customer-search" placeholder="Search customers..." type="search">
+                            </form>
+
+                            <button class="filter" id="filter" type="button"><i class="fa-solid fa-filter"></i><span>Filter</span></button>
+                        </div>
+
+                        <div class="customers">
+                            <table class="customer-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Phone number</th>
+                                        <th>Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="customer-details">
+                        <div class="customer-header">
+                            <div class="customer-title">
+                                <h3 class="customer-name" id="customer-name">Rahul</h3>
+                                <p>Overdue</p>
+                            </div>
+                            <button type="button" class="customer-edit" id="customer-edit"><i class="fa-solid fa-pencil"></i></button>
+                        </div>
+                        <div class="customer-information">
+                            <p>Phone</p>
+                            <p class="phone-number">+91 99999 55555</p>
+                        </div>
+                        <div class="customer-stats">
+                            <div class="stat">
+                                <h4>Outstanding balance</h4>
+                                <p id="outstanding-balance">₹7800</p>
+                            </div>
+                            <div class="stat">
+                                <h4>This year's sales</h4>
+                                <p id="ytd-sales">₹56000</p>
+                            </div>
+                        </div>
+
+                        <div class="transactions">
+                            <table class="transaction-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Type</th>
+                                        <th>Amount</th>
+                                        <th>Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./js/app.js"></script>
+    <script src="./js/customer.js"></script>
+</body>
+</html>

@@ -52,6 +52,142 @@
     margin-bottom: 0px;
 }
 
+.page-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    font-size: 20px;
+    border-bottom: 1px solid #475569;
+}
+
+.page-search {
+    width: 480px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+
+    background-color: white;
+    border: 1px solid #475569;
+    border-radius: 8px;
+}
+
+.page-search i {
+    font-size: 16px;
+    color: #475569;
+}
+
+.page-search input{
+    flex: 1;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px;
+    color: #0f172a;
+}
+
+.page-search input::placeholder {
+    color: #475569;
+}
+
+.page-search:hover {
+    color: black;
+    box-shadow: 4px 4px 8px black;
+}
+
+.page-search:focus-within {
+    box-shadow: 4px 4px 8px darkblue;
+}
+
+.page-action {
+    display: flex;
+    gap: 24px;
+}
+
+.add-product {
+    padding: 12px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    transition: 0.4s;
+    box-shadow: inset 0px 4px 4px black;
+    cursor: pointer;
+}
+
+.filter, .sort {
+    width: 80px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    transition: 0.4s;
+    box-shadow: inset 0px 4px 4px black;
+    cursor: pointer;
+}
+
+.add-product:active, .filter:active, .sort:active {
+    background-color: black;
+    color: white;
+    box-shadow: inset 0px -4px 4px white;
+    cursor: pointer;
+}
+
+.page-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px 0 12px;
+}
+
+.pagination-info {
+    font-size: 16px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.previous-page-button, .next-page-button {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background-color: white;
+    color: black;
+    border: 1px solid #475569;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.4s;
+    box-shadow: inset 0px 1px 4px black;
+}
+
+.page-number {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background-color: white;
+    color: black;
+    border: 1px solid #475569;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.4s;
+    box-shadow: inset 0px 1px 4px black;
+}
+
+.previous-page-button:active, .next-page-button:active, .page-number:active:not(.active) {
+    background-color: black;
+    color: white;
+    box-shadow: inset 0px -1px 4px white;
+    cursor: pointer;
+}
+
 .active {
     background-color: #22c55e;
     color: white;

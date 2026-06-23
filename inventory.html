@@ -20,7 +20,7 @@
             <label for="header-search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </label>
-            <input id="header-search" name="header-search" placeholder="Search Products, sales, purchase..." type="search">
+            <input id="header-search" name="header-search" placeholder="Search Products, sales, customers,...." type="search">
         </form>
 
         <div class="header-actions">
@@ -96,24 +96,24 @@
                 </div>
 
                 <div class="inventory-content">
-                    <div class="inventory-toolbar">
+                    <div class="page-toolbar">
                         <button class="add-product" id="add-product" type="button"><i class="fa-solid fa-plus"></i><span>Add Product</span></button>
 
-                        <form class="inventory-search">
+                        <form class="page-search">
                             <label for="inventory-search">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </label>
                             <input id="inventory-search" name="inventory-search" placeholder="Search products..." type="search">
                         </form>
 
-                        <div class="inventory-action">
+                        <div class="page-action">
                             <button class="filter" id="filter" type="button"><i class="fa-solid fa-filter"></i><span>Filter</span></button>
                             <button class="sort" id="sort" type="button"><i class="fa-solid fa-sort"></i><span>Sort</span></button>
                         </div>
                     </div>
 
-                    <div class="inventory-table">
-                        <table class="product-table">
+                    <div class="inventories">
+                        <table class="inventory-table" id="inventory-table">
                             <thead>
                                 <tr>
                                     <th>Product Name</th>
@@ -154,18 +154,18 @@
                         </table>
                     </div>
 
-                    <div class="inventory-pagination">
+                    <div class="page-pagination">
                         <div class="pagination-info">
                             <p>Showing 1-20 of 480 products</p>
                         </div>
                         <div class="pagination-controls">
-                            <button type="button" class="previous-page-button"><i class="fa-solid fa-chevron-left"></i><span>Previous</span></button>
+                            <button type="button" class="previous-page-button" id="previous-page-button"><i class="fa-solid fa-chevron-left"></i><span>Previous</span></button>
                             <button type="button" class="page-number active"><span>1</span></button>
                             <button type="button" class="page-number"><span>2</span></button>
                             <button type="button" class="page-number"><span>3</span></button>
                             <span class="page-dots">.....</span>
                             <button type="button" class="page-number"><span>24</span></button>
-                            <button type="button" class="next-page-button"><span>Next</span><i class="fa-solid fa-chevron-right"></i></button>
+                            <button type="button" class="next-page-button" id="next-page-button"><span>Next</span><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -173,10 +173,10 @@
                 <div class="inventory-stock-movement">
                     <div class="movement-header">
                         <h3 class="movement-title">Recent Stock Movement</h3>
-                        <button type="button" class="movement-button">View all history</button>
+                        <button type="button" class="movement-button" id="movement-button">View all history</button>
                     </div>
                     <div class="movement-body">
-                        <table class="movement-table">
+                        <table class="movement-table" id="movement-table">
                             <thead>
                                 <tr>
                                     <th>Date & Time</th>
@@ -201,7 +201,7 @@
             </section>
         </div>
     </main>
-    <script src="./JS/app.js"></script>
-    <script src="./JS/dashboard.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/inventory.js"></script>
 </body>
 </html>
