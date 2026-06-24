@@ -12,6 +12,24 @@
     border-bottom: 2px solid #475569;
 }
 
+.add-product {
+    padding: 12px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    transition: 0.4s;
+    box-shadow: inset 0px 4px 4px black;
+    cursor: pointer;
+}
+
+.add-product:active {
+    background-color: black;
+    color: white;
+    box-shadow: inset 0px -4px 4px white;
+    cursor: pointer;
+}
+
 .inventory-table {
     table-layout: fixed;
     border-collapse: collapse;

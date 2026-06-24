@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="./css/customer.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/customer.css">
     <title>Retail Management System</title>
 </head>
 <body>
@@ -57,6 +57,7 @@
                     <div class="customer-list">
                         <div class="page-toolbar">
                             <button class="add-customer" id="add-customer" type="button"><i class="fa-solid fa-plus"></i><span>Add customer</span></button>
+                            
                             <form class="page-search">
                                 <label for="customer-search">
                                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -85,21 +86,21 @@
                         <div class="customer-header">
                             <div class="customer-title">
                                 <h3 class="customer-name" id="customer-name">Rahul</h3>
-                                <p>Overdue</p>
+                                <p id="status">Overdue</p>
                             </div>
                             <button type="button" class="customer-edit" id="customer-edit"><i class="fa-solid fa-pencil"></i></button>
                         </div>
                         <div class="customer-information">
-                            <p>Phone</p>
+                            <p class="phone-title">Phone</p>
                             <p class="phone-number">+91 99999 55555</p>
                         </div>
                         <div class="customer-stats">
-                            <div class="stat">
+                            <div class="stat-1">
                                 <h4>Outstanding balance</h4>
                                 <p id="outstanding-balance">₹7800</p>
                             </div>
-                            <div class="stat">
-                                <h4>This year's sales</h4>
+                            <div class="stat-2">
+                                <h4>Sales this year</h4>
                                 <p id="ytd-sales">₹56000</p>
                             </div>
                         </div>
