@@ -52,6 +52,126 @@
                         <p>Manage your sales and invoicing history</p>
                     </div>
                 </div>
+
+                <div class="sales-invoice">
+                    <div class="invoice-title">
+                        <h3>New Invoice</h3>
+                        <p id="sales-status">Draft</p>
+                    </div>
+                    <button class="add-sales" id="add-sales" type="button"><i class="fa-solid fa-plus"></i><span>Add sale</span></button>
+                </div>
+
+                <div class="invoice-details">
+                    <div class="invoice-number">
+                        <p>Invoice #</p><p id="inoice-number">INV-000-000</p>
+                    </div>
+                    <div class="invoice-date">
+                        <p>Date</p><p id="invoice-date">10/10/2012</p>
+                    </div>
+                    <div class="invoice-due-date">
+                        <p>Due Date</p><p id="invoice-due-date">11/10/2012</p>
+                    </div>
+                </div>
+
+                <div class="sale-customer-tools">
+                    <form class="page-search">
+                        <label for="sale-customer-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </label>
+                        <input id="sale-customer-search" name="sale-customer-search" placeholder="Search sales..." type="search">
+                    </form>
+                    <button><i class="fa-solid fa-user-plus"></i></button>
+                </div>
+
+                <div class="sales-items">
+                    <table class="sale-table" id="sale-table">
+                        <thead>
+                            <tr>
+                                <th>Product description</th>
+                                <th>Quantity</th>
+                                <th>Unit price</th>
+                                <th>Total</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <button type="button" class="add-sale-product" id="add-sale-product">Add product line</button>
+                </div>
+
+                <div class="sale-summary">
+                    <div class="sale-payment-status">
+                        <fieldset class="payment-status">
+                            <legend>Payment status</legend>
+                            <label>
+                                <input type="radio" name="payment-status" value="unpaid"> Unpaid
+                            </label>
+                            <label>
+                                <input type="radio" name="payment-status" value="partial" checked> Partial
+                            </label>
+                            <label>
+                                <input type="radio" name="payment-status" value="paid"> Paid
+                            </label>
+                        </fieldset>
+
+                        <div class="sales-transaction">
+                            <div class="sales-amount">
+                                <p>Amount recieved</p>
+                                <p id="sales-recieved">₹450</p>
+                            </div>
+                            <div class="sales-payment-method">
+                                <p>Payment method</p>
+                                <p id="sales-payment-method">UPI</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sale-payment-value">
+                        <div class="base-sale-price">
+                            <p>Subtotal</p>
+                            <p id="base-sale-price">₹350</p>
+                        </div>
+                        <div class="sale-discount">
+                            <p>Discount</p>
+                            <p id="sale-discount">₹40</p>
+                        </div>
+                        <div class="sale-tax">
+                            <p>Tax</p>
+                            <p id="sale-tax">₹50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sale-history">
+                    <div class="sale-history-toolbar">
+                        <form class="page-search">
+                        <label for="sale-history-search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                        <input id="sale-history-search" name="sale-history-search" placeholder="Search sales..." type="search">
+                        </form>
+                        <button class="filter" id="filter" type="button"><i class="fa-solid fa-filter"></i><span>Filter</span></button>
+                    </div>
+
+                    <div class="invoice-history">
+                        <div class="invoice-history-title">
+                            <h4>Recent Invoices</h4>
+                            <button type="button" class="view-all">View all</button>
+                        </div>
+
+                        <div class="history-table">
+                            <table class="invoice-history-table">
+                                <thead>
+                                    <tr>
+                                        <th>Invoice & date</th>
+                                        <th>Customer</th>
+                                        <th>Total & status</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </section>
     </main>
 </body>
