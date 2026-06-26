@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/components.css">    
-    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/sales.css">
     <title>Retail Management System</title>
 </head>
 <body>
@@ -39,9 +39,6 @@
                     <a href="inventory.html"><i class="fa-solid fa-boxes-stacked"></i>Inventory</a>
                     <a href="customer.html"><i class="fa-solid fa-users"></i>Customer</a>
                     <a href="sales.html" class="active"><i class="fa-solid fa-money-bills"></i>Sales</a>
-                    <a href="supplier.html"><i class="fa-solid fa-user-group"></i>Supplier</a>
-                    <a href="purchase.html"><i class="fa-solid fa-cart-shopping"></i>Purchases</a>
-                    <a href="expense.html"><i class="fa-solid fa-receipt"></i>Expenses</a>
                 </nav>
             </aside>
 
@@ -53,72 +50,74 @@
                     </div>
                 </div>
 
-                <div class="sales-invoice">
-                    <div class="invoice-title">
-                        <h3>New Invoice</h3>
-                        <p id="sales-status">Draft</p>
+                <div class="sale-content">
+                    <div class="sales-invoice">
+                    <div class="sale-header">
+                        <div class="invoice-title">
+                            <h3>New Invoice</h3>
+                            <p id="sales-status">Draft</p>
+                        </div>
+                        <button class="add-sale" id="add-sale" type="button"><i class="fa-solid fa-plus"></i><span>Add sale</span></button>
                     </div>
-                    <button class="add-sales" id="add-sales" type="button"><i class="fa-solid fa-plus"></i><span>Add sale</span></button>
-                </div>
 
-                <div class="invoice-details">
-                    <div class="invoice-number">
-                        <p>Invoice #</p><p id="inoice-number">INV-000-000</p>
+                    <div class="invoice-details">
+                        <div class="invoice-number">
+                            <p>Invoice #</p><p id="invoice-number">INV-000-000</p>
+                        </div>
+                        <div class="invoice-date">
+                            <p>Date</p><p id="invoice-date">10/10/2012</p>
+                        </div>
+                        <div class="invoice-due-date">
+                            <p>Due Date</p><p id="invoice-due-date">11/10/2012</p>
+                        </div>
                     </div>
-                    <div class="invoice-date">
-                        <p>Date</p><p id="invoice-date">10/10/2012</p>
-                    </div>
-                    <div class="invoice-due-date">
-                        <p>Due Date</p><p id="invoice-due-date">11/10/2012</p>
-                    </div>
-                </div>
 
-                <div class="sale-customer-tools">
-                    <form class="page-search">
-                        <label for="sale-customer-search">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </label>
-                        <input id="sale-customer-search" name="sale-customer-search" placeholder="Search sales..." type="search">
-                    </form>
-                    <button><i class="fa-solid fa-user-plus"></i></button>
-                </div>
-
-                <div class="sales-items">
-                    <table class="sale-table" id="sale-table">
-                        <thead>
-                            <tr>
-                                <th>Product description</th>
-                                <th>Quantity</th>
-                                <th>Unit price</th>
-                                <th>Total</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                    <button type="button" class="add-sale-product" id="add-sale-product">Add product line</button>
-                </div>
-
-                <div class="sale-summary">
-                    <div class="sale-payment-status">
-                        <fieldset class="payment-status">
-                            <legend>Payment status</legend>
-                            <label>
-                                <input type="radio" name="payment-status" value="unpaid"> Unpaid
+                    <div class="sale-customer-tools">
+                        <form class="page-search">
+                            <label for="sale-customer-search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </label>
-                            <label>
-                                <input type="radio" name="payment-status" value="partial" checked> Partial
-                            </label>
-                            <label>
-                                <input type="radio" name="payment-status" value="paid"> Paid
-                            </label>
-                        </fieldset>
+                            <input id="sale-customer-search" name="sale-customer-search" placeholder="Search customers.." type="search">
+                        </form>
+                        <button><i class="fa-solid fa-user-plus"></i></button>
+                    </div>
 
+                    <div class="sales-items">
+                        <table class="sale-table" id="sale-table">
+                            <thead>
+                                <tr>
+                                    <th>Product description</th>
+                                    <th>Quantity</th>
+                                    <th>Unit price</th>
+                                    <th>Total</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <button type="button" class="add-sale-product" id="add-sale-product">Add product line</button>
+                    </div>
+
+                    <div class="sale-summary">
+                        <div class="sale-payment-status">
+                            <fieldset class="payment-status">
+                                <legend>Payment status</legend>
+                                <label>
+                                    <input type="radio" name="payment-status" value="unpaid"> Unpaid
+                                </label>
+                                <label>
+                                    <input type="radio" name="payment-status" value="partial" checked> Partial
+                                </label>
+                                <label>
+                                    <input type="radio" name="payment-status" value="paid"> Paid
+                                </label>
+                            </fieldset>
+                        </div>
                         <div class="sales-transaction">
                             <div class="sales-amount">
-                                <p>Amount recieved</p>
-                                <p id="sales-recieved">₹450</p>
+                                <p>Amount received</p>
+                                <p id="sales-received">₹450</p>
                             </div>
                             <div class="sales-payment-method">
                                 <p>Payment method</p>
@@ -141,9 +140,9 @@
                             <p id="sale-tax">₹50</p>
                         </div>
                     </div>
-                </div>
+                    </div>
 
-                <div class="sale-history">
+                    <div class="sale-history">
                     <div class="sale-history-toolbar">
                         <form class="page-search">
                         <label for="sale-history-search"><i class="fa-solid fa-magnifying-glass"></i></label>
@@ -171,7 +170,13 @@
                             </table>
                         </div>
                     </div>
+                    </div>
                 </div>
+
+                
+                
+
+            
             </section>
     </main>
 </body>

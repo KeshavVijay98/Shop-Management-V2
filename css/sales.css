@@ -1,1 +1,377 @@
- 
+.sale-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.sales-page .page-header {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sales-invoice {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 2;
+}
+
+/* ---------- Header ---------- */
+
+.sale-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invoice-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.invoice-title h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+#sales-status {
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.add-sale {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.add-sale:hover {
+    background: #1d4ed8;
+}
+
+.add-sale:active {
+    transform: scale(.98);
+}
+
+/* ---------- Invoice Details ---------- */
+
+.invoice-details {
+    display: flex;
+    gap: 16px;
+}
+
+.invoice-number,
+.invoice-date,
+.invoice-due-date {
+    flex: 1;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.invoice-details p:first-child {
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.invoice-details p:last-child {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* ---------- Customer ---------- */
+
+.sale-customer-tools {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sale-customer-tools .page-search {
+    flex: 1;
+}
+
+.sale-customer-tools button {
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.sale-customer-tools button:hover {
+    background: #1d4ed8;
+}
+
+.sale-customer-tools button:active {
+    transform: scale(.96);
+}
+
+/* ---------- Products ---------- */
+
+.sales-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sale-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.sale-table th {
+    padding: 14px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+    text-align: left;
+}
+
+.sale-table td {
+    padding: 14px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sale-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.add-sale-product {
+    align-self: flex-start;
+    padding: 10px 18px;
+    border: 1px dashed #94a3b8;
+    border-radius: 8px;
+    background: white;
+    color: #334155;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.add-sale-product:hover {
+    background: #f8fafc;
+}
+
+.add-sale-product:active {
+    transform: scale(.98);
+}
+
+/* ---------- Payment ---------- */
+
+.sale-summary{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+    margin-top:24px;
+}
+
+.sale-payment-status{
+    flex:1;
+}
+
+.payment-status{
+    border:none;
+    padding:0;
+    margin:0;
+}
+
+.payment-status legend{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:16px;
+}
+
+.payment-status label{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-right:20px;
+    cursor:pointer;
+}
+
+.payment-status input[type="radio"]{
+    cursor:pointer;
+}
+
+.sales-transaction{
+    margin-top:24px;
+    padding:18px;
+    border:1px solid #d5d9e2;
+    border-radius:8px;
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.sales-amount,
+.sales-payment-method{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.sales-amount p:first-child,
+.sales-payment-method p:first-child{
+    color:#475569;
+}
+
+.sales-amount p:last-child,
+.sales-payment-method p:last-child{
+    font-weight:600;
+}
+
+.sale-payment-value{
+    width:260px;
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.base-sale-price,
+.sale-discount,
+.sale-tax{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom:12px;
+    border-bottom:1px solid #e2e8f0;
+}
+
+.base-sale-price:last-child,
+.sale-discount:last-child,
+.sale-tax:last-child{
+    border-bottom:none;
+}
+
+.base-sale-price p:last-child,
+.sale-discount p:last-child,
+.sale-tax p:last-child{
+    font-weight:600;
+}
+
+
+.sale-history {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    flex: 1;
+}
+
+/* ---------- Toolbar ---------- */
+
+.sale-history-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sale-history-toolbar .page-search {
+    flex: 1;
+}
+
+/* ---------- Invoice History ---------- */
+
+.invoice-history {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.invoice-history-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invoice-history-title h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.view-all {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.view-all:hover {
+    background: #eff6ff;
+}
+
+.view-all:active {
+    transform: scale(.98);
+}
+
+/* ---------- History Table ---------- */
+
+.history-table {
+    overflow-x: auto;
+}
+
+.invoice-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.invoice-history-table th {
+    padding: 14px;
+    text-align: left;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.invoice-history-table td {
+    padding: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    color: #334155;
+}
+
+.invoice-history-table tbody tr {
+    transition: .2s;
+}
+
+.invoice-history-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.invoice-history-table tbody tr:last-child td {
+    border-bottom: none;
+}
